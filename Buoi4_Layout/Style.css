@@ -1,0 +1,102 @@
+/* Selector: cách viết css cho thẻ html */ 
+/* cách 1: sử dụng id
+Cách 2: sử dụng classname 
+Cách 3: selector phân cấp */
+
+
+/* Cách 1 */
+#title1 {
+
+} 
+
+/* Cách 2 */
+.class1 {
+
+}
+
+/* Cách 3 */
+#div > #h1 {
+
+}
+
+
+.color-red {
+    color: #f50d05;
+    font-weight: 100;
+    font-size: 16px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.color-red:hover{
+    color: rgb(76, 106, 240);   
+    font-size: 30px ;
+    font-weight: bold;
+    background-color: yellow;
+    
+    cursor: pointer;
+}
+
+.div {
+    width: 100px; 
+    height: 50px;
+   /* background-color: #b3b0b0; */
+    /* background-image: url('conmeo.png');
+    background-size: cover;
+    background-repeat: unset;
+    opacity: 0.5; */
+
+    border: solid 5px black;
+    border-radius: 10px;
+
+    /* border-style: solid;
+    border-width: 5px;
+    border-color: black; */
+}
+.div2 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(204, 247, 15);
+}
+.card {
+    width: 400px;
+    height: 170px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+    margin-top: 80px;
+    padding: 10px;
+}
+.top{
+    width: 400px;
+    height: 50px;
+   
+}
+.bottom {
+    width: 400px;  
+    height: 120px;
+    /* background-color: azure; */
+}
+.custom-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+   
+}
+.left{
+    width: 40%;
+    height: 100%;
+    background-image: url('https://i1-vnexpress.vnecdn.net/2020/07/04/VNE-Land.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=q7_Wb4Cgw0QWzy4ORFS8kw');
+    float: left;
+}
+.right{
+    width: 60%;
+    height: 100%;
+    /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('https://i1-vnexpress.vnecdn.net/2020/07/04/VNE-Land.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=q7_Wb4Cgw0QWzy4ORFS8kw'); */
+    float: right;
+}
+ 
+.right > p {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+/* Padding, margin */

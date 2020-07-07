@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* scrollx */
+    overflow-x: hidden;
+}
+
+
+.container{
+    background-color: rgb(238, 238, 238);
+    height: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width:100% !important;
+}
+.navbar-custom{
+    height: 6%;
+    
+}
+.content{
+    height: 94%;
+    background-color: rgb(118, 209, 252);
+}
+.left{
+    background-color: rgb(150, 150, 150);
+    padding: 0 !important;
+}
+.right{
+    background-color: rgb(255, 145, 145);
+}
+.search{
+    height: 10%;
+    background-color: rgb(150, 150, 150);
+}
+.table{
+    height: 90%;
+    background-color: rgb(219, 219, 219);
+    margin: 0 !important;
+}
+.custom-menu{
+    height: 100%;
+    width: 360px;
+    margin: 0;
+    padding: 0;
+}
+.custom-list-menu{
+    height: 100%;
+    width: 120px;
+    margin: 0;
+    float: left;
+    /* bỏ style dạng list */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-list-menu:hover{
+    cursor: pointer;
+    background-color: #cdcdcd;
+}
