@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaSript</title>
+    </head>
+    <body>
+        <h1>JavaSript</h1>
+        <form action="xuly.php" method="GET">
+            <input name="txt_ten" id="txt_ten" type="text" placeholder="Nhập tên..." value="Nguyễn Văn A">
+
+            <input name="txt_tuoi" id="txt_tuoi" type="number" placeholder="Nhập tuổi">
+
+            <br>
+
+            <select>
+                <option value="hanoi">Hà Nội</option>
+                <option value="nghean">Nghệ An</option>
+                <option value="quangtri">Quảng Trị</option>
+                <option value="saigon">Sài Gòn</option>
+            </select>
+
+            <hr>
+
+            <input type="button" value="Click me!" onclick="tinhtong();">
+        </form>
+
+        <script type="text/javascript">
+            
+            /* alert(12464);
+            alert("gjhhikk");
+            alert("12ffg"); */
+
+            /* Tên biến
+            Viết thường, không dấu, không khoảng trắng, không ký tự đặc biệt, bắt đầu bằng chữ */
+            var ten='Nguyễn Văn C';
+            var tuoi=12;
+
+            // alert(ten);
+            console.log(tuoi);
+
+            var txt_ten=document.getElementById('txt_ten').value;
+            console.log(txt_ten);
+
+            /* Các cấu trúc điều kiển */
+
+            /* Điều kiện */
+
+            tuoi=61;
+
+            /* Một số phép so sánh
+            ==; !=; >; <; >=; <= */
+
+            if(tuoi<=18){
+                alert('Bạn đang ở tuổi vị thành niên');
+            }else if(tuoi<=60){
+                alert('Bạn đã lớn');
+            }else{
+                // alert('Bạn già rồi');
+            }
+
+            /* Vòng lặp */
+            var ds_tinhthanh=['Hà Nội','Nghệ An','Huế','Bình Thuận','Sài Gòn','Tiền Giang','Cà Mau'];
+
+            var ds_tinhthanh_len=ds_tinhthanh.length;
+
+            var i=0;
+            /* for(i;i<=10;i++){
+                console.log(i);
+            } */
+
+            for(i;i<=ds_tinhthanh_len-1;i++){
+                // console.log(i);
+                // console.log(ds_tinhthanh[i]);
+                console.log(i+'/ '+ds_tinhthanh[i]);
+            }
+
+            /* Hàm - function */
+
+            function tinhtong(){
+                alert(2+5);
+            }
+
+            function tinh_chuvi(dai,rong){
+                var chuvi=(dai+rong)*2;
+                alert(chuvi);
+            }
+
+            tinh_chuvi(4,100);
+
+            tinh_chuvi(5,10);
+
+            // tinhtong();
+
+
+        </script>
+    </body>
+</html>
