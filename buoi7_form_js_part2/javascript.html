@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaSript</title>
+    </head>
+    <body>
+        <h1>JavaSript</h1>
+        <form action="xuly.php" method="GET">
+            <input name="txt_ten" id="txt_ten" type="text" placeholder="Nhập tên..." value="Nguyễn Văn A">
+
+            <input name="txt_tuoi" id="txt_tuoi" type="number" placeholder="Nhập tuổi">
+
+            <br>
+
+            <select id="txt_tinhthanh">
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Nghệ An">Nghệ An</option>
+                <option value="Quảng Trị">Quảng Trị</option>
+                <option value="Sài Gòn">Sài Gòn</option>
+            </select>
+
+            <hr>
+
+            <input type="button" value="Click me!" onclick="notifi();">
+
+            <input type="button" value="9" onclick="tao_pheptinh(9);">
+
+            <h3>Kết quả:</h3>
+            <div id="kq"></div>
+
+            <!-- Tên: Nguyễn Văn A<br>
+            Tuổi: 22<br>
+            Địa chỉ: Sài Gòn<br>
+            Nhận xét: bla bla<br> -->
+
+        </form>
+
+        <script type="text/javascript">
+
+            pheptinh='';
+            function tao_pheptinh(thamso){
+                pheptinh=pheptinh+thamso;
+            }
+
+            
+
+            /* Hàm - function */
+
+            function tinhtong(){
+                alert(2+5);
+            }
+
+            function tinhtong_v2(dai,rong){
+                // alert(dai+rong);
+                var tong=dai+rong;
+                return tong;
+            }
+
+            function tinh_chuvi(dai,rong){
+                // var chuvi=(dai+rong)*2;
+                var chuvi=tinhtong_v2(dai,rong)*2;
+                alert(chuvi);
+            }
+
+            // alert(tinhtong_v2(4,2));
+
+            // tinh_chuvi(4,2);
+
+            // tinh_chuvi(5,10);
+
+            // tinhtong();
+
+            function notifi(){
+                var txt_ten=document.getElementById('txt_ten').value;
+                var txt_tuoi=document.getElementById('txt_tuoi').value;
+                var txt_tinhthanh=document.getElementById('txt_tinhthanh').value;
+                var kq=document.getElementById('kq');
+
+                // var txt_out='Tên: Nguyễn Văn A<br>Tuổi: 22<br>';
+                var txt_out='Tên: '+txt_ten+'<br>';
+                txt_out=txt_out+'Tuổi: '+txt_tuoi+'<br>';
+                txt_out=txt_out+'Địa chỉ: '+txt_tinhthanh+'<br>';
+                // 'b'+'a'+ +'b'+'a'
+                if(txt_tuoi<=18){
+                    // alert('Bạn đang ở tuổi vị thành niên');
+                    // kq.innerHTML='Bạn đang ở tuổi vị thành niên';
+                    txt_out=txt_out+'Nhận xét: Bạn đang ở tuổi vị thành niên<br>';
+                }else if(txt_tuoi<=60){
+                    // alert('Bạn đã lớn');
+                    // kq.innerHTML='Bạn đã lớn';
+                    txt_out=txt_out+'Nhận xét: Bạn đã lớn<br>';
+                }else{
+                    // alert('Bạn già rồi');
+                    // kq.innerHTML='Bạn già rồi';
+                    txt_out=txt_out+'Nhận xét: Bạn già rồi<br>';
+                }
+
+                kq.innerHTML=txt_out;
+
+                console.log(txt_ten,txt_tuoi,txt_tinhthanh);
+            }
+
+
+            
+
+
+
+            function make_selectbox(data_arr){
+                var i=0;
+                var selectbox='<select>';
+                var arr_len=data_arr.length;
+                for(i;i<arr_len;i++){
+                    // console.log(data_arr[i]);
+                    // <option value="Quảng Trị">Quảng Trị</option>
+                    selectbox=selectbox+'<option value="'+data_arr[i]+'">'+data_arr[i]+'</option>';
+                }
+
+                selectbox=selectbox+'</select>';
+
+                // kq.innerHTML=selectbox;
+                document.write(selectbox);
+            }
+
+            var ds_tinhthanh=['An Giang','Bà Rịa - Vũng Tàu','Bạc Liêu','Bắc Giang','Bắc Kạn','Bắc Ninh','Bến Tre','Bình Dương','Bình Định','Bình Phước','Bình Thuận','Cà Mau','Cao Bằng','Cần Thơ','Đà Nẵng','Đắk Lắk','Đắk Nông','Đồng Nai','Đồng Tháp','Điện Biên','Gia Lai','Hà Giang','Hà Nam','Hà Nội','Hà Tĩnh','Hải Dương','Hải Phòng','Hòa Bình','Hậu Giang','Hưng Yên','Thành phố Hồ Chí Minh','Khánh Hòa','Kiên Giang','Kon Tum','Lai Châu','Lào Cai','Lạng Sơn','Lâm Đồng','Long An','Nam Định','Nghệ An','Ninh Bình','Ninh Thuận','Phú Thọ','Phú Yên','Quảng Bình','Quảng Nam','Quảng Ngãi','Quảng Ninh','Quảng Trị','Sóc Trăng','Sơn La','Tây Ninh','Thái Bình','Thái Nguyên','Thanh Hóa','Thừa Thiên - Huế','Tiền Giang','Trà Vinh','Tuyên Quang','Vĩnh Long','Vĩnh Phúc','Yên Bái'];
+
+            make_selectbox(ds_tinhthanh);
+
+            var traicay=['Xoài','Quýt','Cóc','Ổi','Mận'];
+            make_selectbox(traicay);
+
+            var mausac=['Màu xanh','Màu đỏ','Màu vàng','Màu cam'];
+            make_selectbox(mausac);
+
+
+            /* var pheptinh='2';
+            pheptinh=pheptinh+'/';
+            pheptinh=pheptinh+'3';
+            console.log(pheptinh); */
+            var pheptinh='2/4+5-1*8';
+            kq.innerHTML=eval(pheptinh);
+        </script>
+    </body>
+</html>
