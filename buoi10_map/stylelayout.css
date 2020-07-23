@@ -1,0 +1,123 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* scrollx */
+    overflow-x: hidden;
+}
+
+
+.container{
+    background-color: white;
+    height: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width:100% !important;
+}
+.navbar-custom{
+    height: 6%;
+    background-color: #179eff;
+}
+.content{
+    height: 94%;
+    background-color: transparent;
+}
+.left{
+    background-color: transparent;
+    padding: 0 !important;
+    border-right: solid 1px #179eff;
+}
+.right{
+    background-color: transparent;
+    padding: 0;
+}
+.search{
+    height: 10%;
+    background-color: transparent;
+    /* Dàn trang kiểu flex , mặc định theo chiều dọc ==> không sử dụng được thuộc tính float */ 
+    display: flex;
+    /* Căn giữa theo chiều dọc */
+    align-items: center;
+    /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    border-bottom: solid 1px #179eff;
+    width: 100%;
+    margin: 0;
+}
+.table{
+    height: 90%;
+    background-color: white;
+    margin: 0 !important;
+}
+.custom-menu{
+    height: 100%;
+    width: 360px;
+    margin: 0;
+    padding: 0;
+}
+.custom-list-menu{
+    height: 100%;
+    width: 120px;
+    margin: 0;
+    float: left;
+    color: white;
+
+    /* bỏ style dạng list */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-list-menu:hover{
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #283dfa;
+}
+.custom-input{
+    height: 35px;
+    margin-left: 35px;
+    width: 30%;
+    border-radius: 5px;
+    border: solid 1px #179eff;
+    padding-left: 15px;
+}
+.form-control{
+    width: 30% !important;
+}
+.custom-input:focus{
+    border: solid 2px #179eff;   
+    /* outline */
+    outline-color: #179eff; 
+    outline-width: 3px;
+    
+}
+
+.btn{
+   background-color: transparent !important; 
+   border: none;
+  
+}
+.btn:hover{
+    background-color: transparent; 
+}
+.dropdown{
+    /* justify-content:flex-end; */
+    position: absolute;
+    right: 15px;
+    
+}
+
+.custom-button{
+    margin-left: 10px;
+    height: 35px;
+    width: 16%;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+.custom-button:hover{
+    background-color: #086ad3;
+}
