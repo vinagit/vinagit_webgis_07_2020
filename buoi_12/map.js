@@ -204,7 +204,7 @@ function ShowTable(data) {
         //lấy html có id là: kq
         var result = $('#kq');
         // cho thẻ html đó rỗng
-        result.empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm                                                                                                                                                                                                                                                                                                                                                     ();
+        result.empty();
         // chèn bảng vào thẻ html   
         result.append(Table);
     }
